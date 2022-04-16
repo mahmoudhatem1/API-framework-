@@ -1,0 +1,161 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-12T05:28:34.196Z",
+        "line": 12,
+        "name": "Verify if place is being succesfully added using AddPlace APIS",
+        "description": "",
+        "id": "validating-place-apis;verify-if-place-is-being-succesfully-added-using-addplace-apis;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 855517260,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add place payload \"ahmedd\" \"English\" \"world acrosss center\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ahmedd\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"world acrosss center\"",
+                  "offset": 37
+                }
+              ],
+              "location": "firstStepDefinationss.add_place_payload(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 976460271,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user call \"AddPlaceAPI\" API with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 33
+                }
+              ],
+              "location": "firstStepDefinationss.user_call_API_with_http_request(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 992425,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the APIS call is success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "firstStepDefinationss.the_APIS_call_is_success_with_status_code(Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 330769640,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "firstStepDefinationss.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9079736,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 28
+                }
+              ],
+              "location": "firstStepDefinationss.in_response_body_is(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 491497258,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify place_Id created maps to \"ahmedd\" using \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ahmedd\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceAPI\"",
+                  "offset": 47
+                }
+              ],
+              "location": "firstStepDefinationss.verify_place_Id_created_maps_to_using(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Addplace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place APIS",
+    "description": "",
+    "id": "validating-place-apis",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/placeValidation.feature",
+    "tags": []
+  }
+]
